@@ -2,6 +2,7 @@ package S201250181;
 
 public class Line {
 
+    private static int cnt = 0;
     public Line(int length) {
         this.positions = new Position[length];
     }
@@ -42,7 +43,9 @@ public class Line {
     public String toString() {
         String lineString = "\t";
         for (Position p : positions) {
+            cnt++;
             lineString += p.linable.toString();
+            if(cnt%8 == 0 && cnt != 64)lineString += "\n";
         }
         return lineString;
     }
