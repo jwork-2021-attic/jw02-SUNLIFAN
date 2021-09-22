@@ -27,7 +27,7 @@ public class Scene {
         String log = theSnake.lineUp(line);
 
         BufferedWriter writer;
-        writer = new BufferedWriter(new FileWriter("result2.txt"));
+        writer = new BufferedWriter(new FileWriter("result3.txt"));
         writer.write(log);
         writer.flush();
         writer.close();
