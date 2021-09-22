@@ -40,6 +40,8 @@ example 的类型设计中，各个类各自有单一的职责，例如 Line 负
 
 ![participants2](https://i.loli.net/2021/09/22/rEnjc6UlXfIVyBJ.png)
 
+类型设计和任务二一样，只是为了实现显示方阵对实现做了一点点改动。
+
 #### 排序可视化链接
 
 快排版本： https://asciinema.org/a/437280
