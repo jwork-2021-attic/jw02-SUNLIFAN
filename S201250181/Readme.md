@@ -44,7 +44,7 @@ example 的类型设计中，各个类各自有单一的职责，例如 Line 负
 
 #### 排序可视化链接
 
-快排版本： https://asciinema.org/a/437280
+快排版本：https://asciinema.org/a/437471
 
-插排版本： https://asciinema.org/a/437281
+插排版本：https://asciinema.org/a/437470
 

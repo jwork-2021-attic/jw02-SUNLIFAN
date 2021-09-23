@@ -48,7 +48,16 @@ public class Monster implements Linable{
     }
 
     public String toString() {
-        return "\033[48;2;" + this.r + ";" + this.g + ";" + this.b + ";38;2;0;0;0m    " + this.rank() + "  \033[0m";
+        return "\033[48;2;" + this.r + ";" + this.g + ";" + this.b + ";38;2;0;0;0m    " + rankNormalize(this.rank()) + "  \033[0m";
+    }
+
+    private String rankNormalize(int rank){
+        String normalized = ""+rank;
+        int gap = 6 - normalized.length();
+        for(int i = 0; i < gap; i ++){
+            normalized = "0"+normalized;
+        }
+        return normalized;
     }
 
 }
