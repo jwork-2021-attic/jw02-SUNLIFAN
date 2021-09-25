@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="asciianimator">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/asciianimator.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

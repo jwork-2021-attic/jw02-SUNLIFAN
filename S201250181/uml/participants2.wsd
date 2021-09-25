@@ -4,20 +4,22 @@ interface Sorter
 class InsertionSorter
 class QuickSorter
 interface Linable
-class Line 
+class Matrix 
 class Monster
 class RandomGenerator
 class Scene 
 class Snake 
 class Position 
+Matrix : - int row 
+Matrix : - int col 
 Snake ..> Sorter
-Line ..> Linable
+Matrix ..> Linable
 Linable <|.. Monster
 Sorter <|.. QuickSorter
 Sorter <|.. InsertionSorter
 Monster o-- Position
 Position o-- Linable
-Snake ..> Line
+Snake ..> Matrix
 Monster ..> Color
 RandomGenerator ..> Color
 Scene ..> RandomGenerator
@@ -29,17 +31,17 @@ Linable : + void setPosition(Position position);
 Linable : + Position getPosition();
 Linable : + int getValue();
 Monster : - Position position
-Line : + void put(Linable linable, int i)
-Line : + Linable get(int i)
+Matrix : + void put(Linable linable, int i)
+Matrix : + Linable get(int i)
 Position : + void setLinable(Linable linable)
-Line : + Linable[] toArray()
+Matrix : + Linable[] toArray()
 Sorter : + void load(int[] elements)
 Sorter : + void sort()
 Sorter : + String getPlan()
 Snake : - Sorter Sorter
 Snake : + {static} Snake getTheSnake()
 Snake : + void setSorter(Sorter sorter)
-Snake : + String lineUp(Line line)
+Snake : + String lineUp(Matrix matrix)
 Color : - int r 
 Color : - int g 
 Color : - int b 

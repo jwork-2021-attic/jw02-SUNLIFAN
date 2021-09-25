@@ -6,15 +6,19 @@ import java.io.IOException;
 
 public class Scene {
     public static void main(String[] args) throws IOException {
-        Color[] colors = RandomGenerator.generateColor(64);
+        int row = 8;
+        int col = 8;
 
-        for(int i = 0; i < 64; i ++){
+        Color[] colors = RandomGenerator.generateColor(row*col);
+
+        for(int i = 0; i < row*col; i ++){
             new Monster(colors[i]);
         }
-        Line line = new Line(64);
+        
+        Matrix matrix = new Matrix(row,col);
         int index = 0;
         for(Monster m:Monster.monsters.values()){
-            line.put(m,index);
+            matrix.put(m,index);
             index++;
         }
 
@@ -24,7 +28,7 @@ public class Scene {
         //Sorter sorter = new InsertionSorter();
         theSnake.setSorter(sorter);
 
-        String log = theSnake.lineUp(line);
+        String log = theSnake.lineUp(matrix);
 
         BufferedWriter writer;
         writer = new BufferedWriter(new FileWriter("result3.txt"));

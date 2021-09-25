@@ -1,9 +1,19 @@
 package S201250181;
 
-public class Line {
+public class Matrix {
 
-    private static int cnt = 0;//add in 8x8 version
-    public Line(int length) {
+    //add in 8x8 version
+
+    private int col;
+    
+    private int row;
+
+    private static int cnt;
+
+    public Matrix(int row,int col) {
+        int length = row*col;
+        this.row = row;
+        this.col = col;
         this.positions = new Position[length];
     }
 
@@ -46,7 +56,7 @@ public class Line {
         for (Position p : positions) {
             cnt++;
             lineString += p.linable.toString();
-            if(cnt%8 == 0 && cnt != 64)lineString += "\n";//add in 8x8 version
+            if(cnt%col == 0 && cnt != row*col)lineString += "\n";//add in 8x8 version
         }
         return lineString;
     }

@@ -2,7 +2,7 @@ package S201250181;
 
 import java.util.HashMap;
 
-import S201250181.Line.Position;
+import S201250181.Matrix.Position;
 public class Monster implements Linable{
     public static HashMap<Integer,Monster> monsters = new HashMap<>();
     private int r;

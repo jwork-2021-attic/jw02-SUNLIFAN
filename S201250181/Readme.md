@@ -38,13 +38,25 @@ example 的类型设计中，各个类各自有单一的职责，例如 Line 负
 
 ### 任务三
 
-![participants2](https://i.loli.net/2021/09/22/rEnjc6UlXfIVyBJ.png)
+![participants2](https://i.loli.net/2021/09/25/SHRKb362XiBgsLT.png)
 
-类型设计和任务二一样，只是为了实现显示方阵对实现做了一点点改动，在 Line 类的 toString 方法中每 8 个多加一个换行符，这样就可以实现把直线转化为方阵。
+类型设计和任务二差不多，Line 类改成了 Matrix 类，修改了 Line 的一些接口，使得它符合 Matrix 的行为。
 
 #### 排序可视化链接
 
 快排版本：https://asciinema.org/a/437471
 
 插排版本：https://asciinema.org/a/437470
+
+
+
+### 版本发布：
+
+v1.0      64x1 version
+
+v1.1      8x8 version 1.0
+
+v1.2     8x8 version  2.0
+
+v1.3     8x8 version  maybe final 8x8 version
 
