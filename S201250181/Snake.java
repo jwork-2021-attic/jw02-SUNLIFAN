@@ -21,7 +21,7 @@ public class Snake {
         this.sorter = sorter;
     }
 
-    public String lineUp(Matrix matrix) {
+    public String startArranging(Matrix matrix) {
 
         String log = new String();
 

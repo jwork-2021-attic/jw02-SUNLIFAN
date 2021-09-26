@@ -8,7 +8,8 @@ public class Scene {
     public static void main(String[] args) throws IOException {
         int row = 8;
         int col = 8;
-
+        int index = 0;
+        
         Color[] colors = RandomGenerator.generateColor(row*col);
 
         for(int i = 0; i < row*col; i ++){
@@ -16,9 +17,11 @@ public class Scene {
         }
         
         Matrix matrix = new Matrix(row,col);
-        int index = 0;
+        
         for(Monster m:Monster.monsters.values()){
-            matrix.put(m,index);
+            
+            matrix.put(m,index/col+1,index%col+1);
+            
             index++;
         }
 
@@ -27,9 +30,9 @@ public class Scene {
         Sorter sorter = new QuickSorter();
         //Sorter sorter = new InsertionSorter();
         theSnake.setSorter(sorter);
-
-        String log = theSnake.lineUp(matrix);
-
+    
+        String log = theSnake.startArranging(matrix);
+    
         BufferedWriter writer;
         writer = new BufferedWriter(new FileWriter("result3.txt"));
         writer.write(log);

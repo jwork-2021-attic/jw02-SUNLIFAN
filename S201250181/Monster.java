@@ -15,7 +15,7 @@ public class Monster implements Linable{
         this.r = c.getR();
         this.g = c.getG();
         this.b = c.getB();
-        this.rank = 1000*r+b+g;
+        this.rank = 1023*r+511*b+3*g;
         monsters.put(rank,this);
 
     }

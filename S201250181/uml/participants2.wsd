@@ -31,8 +31,8 @@ Linable : + void setPosition(Position position);
 Linable : + Position getPosition();
 Linable : + int getValue();
 Monster : - Position position
-Matrix : + void put(Linable linable, int i)
-Matrix : + Linable get(int i)
+Matrix : + void put(Linable linable, int rowNum,int colNum)
+Matrix : + Linable get(int rowNum,int colNum)
 Position : + void setLinable(Linable linable)
 Matrix : + Linable[] toArray()
 Sorter : + void load(int[] elements)
@@ -41,7 +41,7 @@ Sorter : + String getPlan()
 Snake : - Sorter Sorter
 Snake : + {static} Snake getTheSnake()
 Snake : + void setSorter(Sorter sorter)
-Snake : + String lineUp(Matrix matrix)
+Snake : + String startArranging(Matrix matrix)
 Color : - int r 
 Color : - int g 
 Color : - int b 

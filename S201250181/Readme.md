@@ -38,7 +38,7 @@ example 的类型设计中，各个类各自有单一的职责，例如 Line 负
 
 ### 任务三
 
-![participants2](https://i.loli.net/2021/09/25/SHRKb362XiBgsLT.png)
+![participants2](https://i.loli.net/2021/09/26/cuMObLUq8pNh24K.png)
 
 类型设计和任务二差不多，Line 类改成了 Matrix 类，修改了 Line 的一些接口，使得它符合 Matrix 的行为。
 

@@ -19,14 +19,28 @@ public class Matrix {
 
     private Position[] positions;
 
-    public void put(Linable linable, int i) {
+    /**
+     * 
+     * @param linable
+     * @param rowNum 行号，从 1 开始
+     * @param colNum 列号，从 1 开始
+     */
+    public void put(Linable linable, int rowNum,int colNum) {
+        int i = (rowNum-1)*col + colNum - 1;
         if (this.positions[i] == null) {
             this.positions[i] = new Position(null);
         }
         this.positions[i].setLinable(linable);
     }
+    /**
+     * 
+     * @param rowNum 行号，从 1 开始
+     * @param colNum 列号，从 1 开始
+     * @return
+     */
 
-    public Linable get(int i) {
+    public Linable get(int rowNum,int colNum) {
+        int i = (rowNum-1)*col+colNum - 1;
         if ((i < 0) || (i > positions.length)) {
             return null;
         } else {
