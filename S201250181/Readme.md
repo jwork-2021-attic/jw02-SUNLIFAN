@@ -44,9 +44,9 @@ example 的类型设计中，各个类各自有单一的职责，例如 Line 负
 
 #### 排序可视化链接
 
-快排版本：https://asciinema.org/a/437471
+快排版本：https://asciinema.org/a/438290
 
-插排版本：https://asciinema.org/a/437470
+插排版本：https://asciinema.org/a/438289
 
 
 
@@ -58,5 +58,5 @@ v1.1      8x8 version 1.0
 
 v1.2     8x8 version  2.0
 
-v1.3     8x8 version  maybe final 8x8 version
+v1.3     8x8 version   final 8x8 version
 
